@@ -49,7 +49,7 @@ namespace CoHEF
         static string cohfilename2 = "RelicCoH.exe";
 
         // NOTE: -unqiuetoken is only a "marker" to find the right process in case of more than one RelicCoH Process
-        static string steamarguments = "-applaunch 228200 -dev -mod EF_beta -uniquetoken";
+        static string steamarguments = "-applaunch 228200 -mod EasternFront -dev -uniquetoken";
 
         static void Main(string[] args)
         {
@@ -300,12 +300,12 @@ namespace CoHEF
         static string getscardir()
         {
             string path_to_dir = Directory.GetCurrentDirectory();
-            string path_to_scar = path_to_dir + "\\EF_beta\\Data\\scar\\steam.scar";
+            string path_to_scar = path_to_dir + "\\EasternFront\\Data\\scar\\steam.scar";
 
             if (!File.Exists(path_to_scar))
             {
                 path_to_dir = Path.GetFullPath(Path.Combine(path_to_dir, @"..\"));
-                path_to_scar = path_to_dir + "\\EF_beta\\Data\\scar\\steam.scar";
+                path_to_scar = path_to_dir + "\\EasternFront\\Data\\scar\\steam.scar";
             }
             return path_to_scar;
         }
